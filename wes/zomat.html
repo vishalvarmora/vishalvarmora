@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        .navbar{
+            border: solid 2px;
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: cadetblue;
+        }
+        input{
+            padding: 8px 15px;
+        }
+        .btn{
+            padding: 5px 20px;
+        }
+        .btn:hover{
+            background-color: burlywood;
+            border: solid 2px;
+        }
+        ul li{
+            display: inline-block;
+            border: solid 2px;
+            background-color: burlywood;
+        }      
+        .icon{
+            font-size: 30px;
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+     <div class="logo">
+      <img src="../image/zomat logo.png" alt="">
+     </div>
+    <td>
+        <select >
+            <option value="NONE">enter your city</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="surat">surat</option>
+            <option value="mubai">mubai</option>
+            <option value="rajsthan">rajsthan</option>
+        </select>
+        <div>
+            <input type="search" name="" id="" placeholder="search for product,brand">
+        </div>
+        <div>
+            <button class="btn">logo</button>
+        </div>
+        <div>
+        <ul>
+            <li><a href="#">sign-up</a></li>
+        </ul>
+        </div>
+        <div class="icon">
+            <i class="fa-solid fa-truck"></i>
+        </div>
+    </nav>
+</body>
+</html>
