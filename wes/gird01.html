@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            height: 1700px;
+            background-color: darkgreen;
+            display: grid;
+            row-gap: 10px;
+            column-gap: 10px;
+            /* grid-template-rows: 200px 200px 200px;
+            grid-template-columns: 200px 200px 200px; */
+            grid-template-rows: 150px 1fr 1fr;
+            grid-template-columns: 150px 1fr 1fr 1fr;
+            /* grid-template-rows: repeat(3,1fr);
+            grid-template-columns: repeat(3,1fr); */
+        }
+        .box{
+            /* width: 150px;
+            height: 150px; */
+            border: solid 1px;
+            background-color: orange;
+            /* margin: 5px; */
+        }
+        #header{
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            grid-row-start:1 ;
+            grid-column-end:4 ;
+        }
+        #section{
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            grid-row-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-column-end: 3;
+        }
+        #footer{
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            grid-row-start:1 ;
+            grid-column-end:4 ;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box" id="header">header</div>
+        <div class="box" id="section">section</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="footer">footer</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
+</body>
+</html>
