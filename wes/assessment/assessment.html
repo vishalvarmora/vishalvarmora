@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    
+    <style>
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: burlywood;
+            padding: 10px;
+        }
+
+        .todo-app {
+            width: 100%;
+            max-width: 540px;
+            background-color: white;
+            margin: 100px auto 20px;
+            padding: 40px 30px 70px;
+            border-radius: 10px;
+        }
+
+        .todo-app h2 {
+            color: #002765;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #edeef0;
+            border-radius: 30px;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 10px;
+            font-weight: 14px;
+        }
+
+        #btn {
+            border: none;
+            outline: none;
+            padding: 16px 50px;
+            background: #ff5945;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            top: 12px;
+            left: 8px;
+        }
+
+        ul li.checked {
+            color: #555;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="todo-app">
+            <h2>To-Do List</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <span id="texterror"></span>
+                <button id="btn">Add</button>
+            </div>
+            <ul id="List-container">
+
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const inputbox = document.getElementById("input-box");
+        const listcontainer = document.getElementById("List-container");
+        const btn = document.getElementById("btn")
+
+        btn.addEventListener("click", () => {
+            const inputValue = inputbox.value.trim();
+            if (inputValue !== '') {
+
+                const listItem = document.createElement("li");
+                listItem.textContent = inputValue;
+                listcontainer.appendChild(listItem);
+
+
+                inputbox.value = '';
+            } else {
+                document.getElementById("texterror")
+                alert(' "You must write something!"') 
+            }   
+        });
+
+
+        inputbox.addEventListener("click", () => {
+            document.getElementById("texterror").textContent = "";
+        });
+
+    </script>
+</body>
+</html>
